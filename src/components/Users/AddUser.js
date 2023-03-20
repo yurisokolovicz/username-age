@@ -21,7 +21,16 @@ const AddUser = props => {
 
     const addUserHandler = event => {
         event.preventDefault();
+        // Make the code below executes only with valid inputs
+        if (username.trim().length === 0 || age.trim().length === 0) {
+            return; // the lines below will not be executed
+        }
+        if (+age < 1) {
+            return; // the lines below will not be executed
+        }
         console.log(username, age);
+        setUsername('');
+        setAge('');
     };
 
     return (

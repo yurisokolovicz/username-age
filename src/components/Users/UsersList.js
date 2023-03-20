@@ -7,7 +7,7 @@ const UsersList = props => {
         <Card cssClass={classes.users}>
             <ul>
                 {props.propsnamex.map(user => (
-                    <li>{user.name} (user.age) years old</li>
+                    <li key={user.id}>{user.name} (user.age) years old</li>
                 ))}
             </ul>
         </Card>

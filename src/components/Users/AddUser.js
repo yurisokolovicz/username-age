@@ -51,3 +51,5 @@ const AddUser = props => {
 };
 
 export default AddUser;
+
+// Input fields now with ref are uncontrolled components. If we add 2 input in the, the first can appears as it was the last.
